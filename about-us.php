@@ -76,12 +76,9 @@ $pagedes=$con->real_escape_string($_POST['pagedes']);
 						<!-- end: PAGE TITLE -->
 						<!-- start: BASIC EXAMPLE -->
 						<div class="container-fluid container-fullw bg-white">
-						
-
-									<div class="row">
+							<div class="row">
 								<div class="col-md-12">
-									
-									
+												
                   <form class="forms-sample" method="post">
                     <?php
                 
@@ -154,3 +151,4 @@ while ($row=mysqli_fetch_array($ret)) {
 	</body>
 </html>
 <?php } ?>
+
