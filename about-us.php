@@ -6,30 +6,24 @@ if(strlen($_SESSION['id']==0)) {
  header('location:logout.php');
   } else{
 //Code for Update the Content
-
   	if(isset($_POST['submit']))
   {
-   
      $pagetitle=$_POST['pagetitle'];
 $pagedes=$con->real_escape_string($_POST['pagedes']);
      $query=mysqli_query($con,"update tblpage set PageTitle='$pagetitle',PageDescription='$pagedes' where  PageType='aboutus'");
     if ($query) {
- 
     echo '<script>alert("About Us has been updated.")</script>';
   }
   else
     {
       echo '<script>alert("Something Went Wrong. Please try again.")</script>';
     }
-  
 }
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
 	<head>
 		<title>Admin | About Us </title>
-		
 		<link href="http://fonts.googleapis.com/css?family=Lato:300,400,400italic,600,700|Raleway:300,400,500,600,700|Crete+Round:400italic" rel="stylesheet" type="text/css" />
 		<link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
 		<link rel="stylesheet" href="vendor/fontawesome/css/font-awesome.min.css">
@@ -51,8 +45,6 @@ $pagedes=$con->real_escape_string($_POST['pagedes']);
 		<div id="app">		
 <?php include('include/sidebar.php');?>
 			<div class="app-content">
-				
-
 					<?php include('include/header.php');?>
 				<!-- end: TOP NAVBAR -->
 				<div class="main-content" >
@@ -77,15 +69,12 @@ $pagedes=$con->real_escape_string($_POST['pagedes']);
 						<!-- start: BASIC EXAMPLE -->
 						<div class="container-fluid container-fullw bg-white">
 							<div class="row">
-								<div class="col-md-12">
-												
+								<div class="col-md-12">									
                   <form class="forms-sample" method="post">
-                    <?php
-                
+                    <?php    
 $ret=mysqli_query($con,"select * from  tblpage where PageType='aboutus'");
 $cnt=1;
 while ($row=mysqli_fetch_array($ret)) {
-
 ?>
                     <div class="form-group">
                        <label for="exampleInputUsername1">Page Title</label>
@@ -94,18 +83,15 @@ while ($row=mysqli_fetch_array($ret)) {
                     <div class="form-group">
                       <label for="exampleInputEmail1">Page Description</label>
                       <textarea class="form-control" name="pagedes" id="pagedes" rows="12"><?php  echo $row['PageDescription'];?></textarea>
-                    </div>
-                    
+                    </div>      
                     <?php } ?>
                     <button type="submit" class="btn btn-primary mr-2" name="submit">Submit</button>
                   </form>
 								</div>
 							</div>
-								</div>
-						
+								</div>		
 						<!-- end: BASIC EXAMPLE -->
-						<!-- end: SELECT BOXES -->
-						
+						<!-- end: SELECT BOXES -->		
 					</div>
 				</div>
 			</div>
@@ -151,4 +137,5 @@ while ($row=mysqli_fetch_array($ret)) {
 	</body>
 </html>
 <?php } ?>
+
 
