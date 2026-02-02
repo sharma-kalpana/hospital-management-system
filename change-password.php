@@ -29,7 +29,6 @@ $_SESSION['msg1']="Old Password not match !!";
 <html lang="en">
 	<head>
 		<title>Doctor  | change Password</title>
-		
 		<link href="http://fonts.googleapis.com/css?family=Lato:300,400,400italic,600,700|Raleway:300,400,500,600,700|Crete+Round:400italic" rel="stylesheet" type="text/css" />
 		<link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
 		<link rel="stylesheet" href="vendor/fontawesome/css/font-awesome.min.css">
@@ -74,15 +73,12 @@ return false;
 return true;
 }
 </script>
-
 	</head>
 	<body>
 		<div id="app">		
 <?php include('include/sidebar.php');?>
-			<div class="app-content">
-				
+			<div class="app-content">			
 						<?php include('include/header.php');?>
-						
 				<!-- end: TOP NAVBAR -->
 				<div class="main-content" >
 					<div class="wrap-content container" id="container">
@@ -136,10 +132,7 @@ return true;
 																Confirm Password
 															</label>
 									<input type="password" name="cfpass" class="form-control"  placeholder="Confirm Password">
-														</div>
-														
-														
-														
+														</div>													
 														<button type="submit" name="submit" class="btn btn-o btn-primary">
 															Submit
 														</button>
@@ -208,3 +201,4 @@ return true;
 	</body>
 </html>
 <?php } ?>
+
